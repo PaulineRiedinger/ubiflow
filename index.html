@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CV Pauline Riedinger</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="header">
+      <div class="hero-content">
+        <!-- 
+          id "typewriter" p-> applique effet "machine à écrire" 
+        -->
+        <h1 id="typewriter"></h1>
+        <p>Développeuse Web</p>
+      </div>
+    </header>
+
+    <section id="about">
+      <h2>À propos de moi</h2>
+      <p>
+        Je recherche un <strong>contrat de professionnalisation</strong> afin de
+        compléter ma formation en alternance dans le cadre du programme
+        <a
+          href="https://openclassrooms.com/fr/paths/899-developpeur-web"
+          target="_blank"
+          >Développeur Web</a
+        >
+        chez OpenClassrooms.
+      </p>
+      <p>
+        <br />Après <strong>10 ans dans l’administratif</strong>, j’ai choisi de
+        me reconvertir dans le développement web, un domaine qui me permet
+        d’exprimer ma <strong>créativité</strong> tout en mobilisant mon
+        <strong>esprit logique</strong>. Convaincue que le numérique joue un
+        rôle clé dans l’avenir de notre société, j’ai voulu m’investir dans un
+        secteur où les enjeux sont importants et l’innovation permanente.
+      </p>
+      <p>
+        <br />
+        J’ai suivi le bootcamp du
+        <a
+          href="https://www.lereacteur.io/bootcamp-javascript/formation-developpeur-web-mobile/"
+          target="_blank"
+          >Reacteur</a
+        >
+        d’octobre à décembre 2024, où j’ai acquis des bases en
+        <strong>HTML, CSS et JavaScript</strong>, ainsi que des notions en
+        <strong>React, Node.JS et MongoDB</strong>.
+      </p>
+      <p>
+        <br />
+        Je suis particulièrement motivée par l'opportunité d'intégrer
+        <strong>Ubiflow</strong> en tant que <strong>Développeuse IA</strong> :
+      </p>
+      <ul>
+        <li>
+          L’annonce reflète un <strong>cadre de travail stimulant</strong> et
+          des missions enrichissantes.
+        </li>
+        <li>
+          L’intégration est une valeur forte chez Ubiflow, avec un
+          <strong>tuteur dédié</strong> et un
+          <strong>parcours d'accompagnement</strong>.
+        </li>
+        <li>
+          Mes compétences en <strong>JavaScript, Git</strong> et ma curiosité
+          pour l’IA correspondent aux attentes du poste.
+        </li>
+        <li>
+          Je suis prête à me former en amont sur les technologies nécessaires
+          pour être <strong>opérationnelle dès le début du contrat</strong>.
+        </li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Compétences</h2>
+      <ul>
+        <li>HTML / CSS / JavaScript</li>
+        <li>React</li>
+        <li>Node.JS</li>
+        <li>Git</li>
+        <li>MongoDB</li>
+        <li>Utilisation d'outils IA (ChatGPT, Copilot...)</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="projects-container">
+        <article class="project">
+          <img
+            src="images/mondrian.png"
+            alt="Capture d'écran Randomrian"
+            class="project-img"
+          />
+          <h3>
+            <a href="https://randomrian.netlify.app/" target="_blank"
+              >Randomrian</a
+            >
+          </h3>
+          <ul>
+            <li>
+              <strong>Concept :</strong> Générateur interactif inspiré de
+              Mondrian.
+            </li>
+            <li>
+              <strong>Fonctionnement :</strong> Ajout de couleurs aléatoires sur
+              une grille, reset possible.
+            </li>
+            <li><strong>Notions :</strong> DOM, événements, CSS Grid.</li>
+            <li><strong>Tech Stack :</strong> HTML, CSS, JavaScript.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <img
+            src="images/coderoulette.png"
+            alt="Capture d'écran Projet 3"
+            class="project-img"
+          />
+          <h3>
+            <a
+              href="https://github.com/PaulineRiedinger/coderoulette"
+              target="_blank"
+              >CodeRoulette</a
+            >
+          </h3>
+          <ul>
+            <li>
+              <strong>Concept :</strong> Générateur aléatoire d'idées de projets
+              web.
+            </li>
+            <li>
+              <strong>Fonctionnement :</strong> Un clic, une idée instantanée !
+            </li>
+            <li><strong>Notions :</strong> DOM, Math.random(), CSS.</li>
+            <li><strong>Tech Stack :</strong> HTML, CSS, JavaScript.</li>
+          </ul>
+        </article>
+
+        <article class="project">
+          <img
+            src="images/pokedex.png"
+            alt="Capture d'écran Projet 4"
+            class="project-img"
+          />
+          <h3>
+            <a
+              href="https://github.com/PaulineRiedinger/pokedex"
+              target="_blank"
+              >Pokédex</a
+            >
+          </h3>
+          <ul>
+            <li>
+              <strong>Concept :</strong> Affiche et navigue entre les Pokémon.
+            </li>
+            <li>
+              <strong>Fonctionnement :</strong> Données récupérées via PokéAPI.
+            </li>
+            <li><strong>Notions :</strong> fetch API, DOM, CSS.</li>
+            <li><strong>Tech Stack :</strong> HTML, CSS, JavaScript.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="chatbot">
+      <h2>Posez-moi une question !</h2>
+      <div id="chat-window">
+        <div id="chat-log"></div>
+        <div id="chat-controls">
+          <input
+            type="text"
+            id="chat-input"
+            placeholder="Dites bonjour ! Pour plus d'infos, tapez Aide ou cliquez sur Explication."
+          />
+          <button id="chat-send">Envoyer</button>
+          <button id="chat-help">Explication</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>
+        <a href="mailto:levron.pauline@gmail.com">levron.pauline@gmail.com</a>
+      </p>
+      <p>
+        <a href="https://www.linkedin.com/in/pauline-riedinger/" target="_blank"
+          >LinkedIn</a
+        >
+      </p>
+      <p>
+        <a href="https://pauline-riedinger.netlify.app/" target="_blank"
+          >Mon portfolio</a
+        >
+      </p>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>
+      <p>&copy; 2025 Pauline Riedinger | Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

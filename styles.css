@@ -21,6 +21,7 @@ body {
   Couleurs inspirées de la charte Ubiflow -> définition de quelques variables pour + de flexibilité
 */
 :root {
+  --ubiflow-dark-teal: #06262e;
   --ubiflow-teal: #00677e; /* Couleur de fond principale */
   --ubiflow-light-teal: #00bdc9; /* Optionnel pour éléments d'accent */
   --ubiflow-pink: #ef5a53; /* Pour boutons d'action */
@@ -31,7 +32,12 @@ body {
   HEADER
 */
 #header {
-  background-color: var(--ubiflow-teal);
+  background: linear-gradient(
+    to right,
+    var(--ubiflow-light-teal),
+    var(--ubiflow-teal),
+    var(--ubiflow-dark-teal)
+  );
   color: var(--ubiflow-white);
   text-align: center;
   padding: 60px 20px;

@@ -13,7 +13,7 @@ function typeWriter() {
     setTimeout(typeWriter, 100);
   }
 }
-// Page chargée = lancement de la fonction typeWriter.
+// Page chargée = lancement de la fonction typeWriter
 window.addEventListener("load", typeWriter);
 
 // Sélection des éléments du chatbot dans le DOM
@@ -41,8 +41,8 @@ const responses = {
   objectif:
     "Mon objectif est de continuer à apprendre en intégrant une équipe prête à m'accueillir et à m'aider à monter en compétences. Peut-être la vôtre ?",
 };
-// Fonction pour afficher un message dans la zone de chat.
-// Paramètre "sender" -> "bot" ou "user".
+// Fonction pour afficher un message dans la zone de chat
+// Paramètre "sender" -> "bot" ou "user"
 function appendMessage(message, sender = "bot") {
   const messageDiv = document.createElement("div");
   messageDiv.className = sender;
@@ -84,15 +84,64 @@ chatInput.addEventListener("keypress", (e) => {
     chatSend.click();
   }
 });
-// Bouton "Explication" affiche alerte listant mots-clés reconnus
-document.getElementById("chat-help").addEventListener("click", () => {
-  const keywordExplanation = `Mots-clés déclencheurs de réponses prédéfinies:
-- bonjour
-- qui es-tu
-- parcours
-- projets
-- ia
-- objectif`;
 
-  alert(keywordExplanation);
+// Bouton "Explication" affiche modal listant mots-clés reconnus
+document.getElementById("chat-help").addEventListener("click", () => {
+  const keywordExplanation = `Mots-clés déclencheurs de réponses prédéfinies :
+  - bonjour
+  - qui es-tu
+  - parcours
+  - projets
+  - ia
+  - objectif`;
+
+  // Désactivation scroll sur body
+  document.body.style.overflow = "hidden";
+
+  // Création fond semi-transparent (overlay)
+  const overlay = document.createElement("div");
+  overlay.style.position = "fixed";
+  overlay.style.top = "0";
+  overlay.style.left = "0";
+  overlay.style.width = "100vw";
+  overlay.style.height = "100vh";
+  overlay.style.background = "rgba(0, 0, 0, 0.5)";
+  overlay.style.display = "flex";
+  overlay.style.alignItems = "center";
+  overlay.style.justifyContent = "center";
+  overlay.style.zIndex = "1000";
+
+  // Création modal
+  const chatBox = document.createElement("div");
+  chatBox.style.background = "white";
+  chatBox.style.padding = "20px";
+  chatBox.style.borderRadius = "10px";
+  chatBox.style.boxShadow = "0px 4px 10px rgba(0, 0, 0, 0.2)";
+  chatBox.style.width = "300px";
+  chatBox.style.textAlign = "center";
+  chatBox.innerHTML = `<p>${keywordExplanation.replace(/\n/g, "<br>")}</p>`;
+
+  // Création bouton de fermeture
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "Fermer";
+  closeButton.style.marginTop = "10px";
+  closeButton.style.padding = "8px 15px";
+  closeButton.style.border = "none";
+  closeButton.style.background = "#007bff";
+  closeButton.style.color = "white";
+  closeButton.style.borderRadius = "5px";
+  closeButton.style.cursor = "pointer";
+
+  // Fermeture modal au clic sur bouton
+  closeButton.addEventListener("click", () => {
+    overlay.remove();
+    document.body.style.overflow = "auto"; // Réactivation du scroll
+  });
+
+  // Ajout bouton à la modal
+  chatBox.appendChild(closeButton);
+
+  // Ajout de la modal à l'overlay, puis ajout de l'overlay au body
+  overlay.appendChild(chatBox);
+  document.body.appendChild(overlay);
 });
